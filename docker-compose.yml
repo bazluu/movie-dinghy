@@ -1,0 +1,14 @@
+services:
+
+  imdb_redirect:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: imdb_redirect
+    command: python manage.py runserver 0.0.0.0:8000
+    working_dir: /app
+    environment:
+      - DEBUG=True
+    ports:
+      - "8000:8000"
+
