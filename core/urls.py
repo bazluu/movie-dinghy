@@ -23,6 +23,5 @@ from app.api import api as app_api
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("test/", RedirectView.as_view(url="https://news.ycombinator.com/")),
-    # path("", app_api.urls),
+    path("", app_api.urls),
 ]
