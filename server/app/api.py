@@ -8,7 +8,7 @@ from app import services
 api = NinjaAPI()
 
 
-@api.get("title/{title_id}")
+@api.get("title/{title_id}/")
 def imdb_title(request, title_id: str):
     if not title_id.startswith("tt"):
         return JsonResponse(
