@@ -9,6 +9,11 @@ def log(message: str):
     if settings.DEBUG is False:
         with open("movie_dinghy.log", "a") as log_file:
             log_file.write(f"{message}\n")
+    else:
+        print("=========================")
+        print("DEBUG MODE - Log message:")
+        print(message)
+        print("=========================")
 
 
 def get_movie_by_imdb_title_id(imdb_title_id: str):
